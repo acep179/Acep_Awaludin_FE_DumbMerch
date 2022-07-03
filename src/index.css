@@ -1,13 +1,34 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Avenir',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*. CSS Tambahan */
+
+.h-100vh{
+  height: 100vh;
+}
+.bg-grey-700{
+  background-color: #495057 !important;
+  color: white !important;
+}
+.bg-grey-800{
+  background-color: #343a40 !important;
+}
+.btn-orange{
+  background-color: #F74D4D !important;
+  color: white !important;
+}
+.btn-orange:hover{
+  background-color: #E13A3A !important;
 }
