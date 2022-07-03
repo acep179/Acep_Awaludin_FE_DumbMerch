@@ -25,6 +25,15 @@ code {
 .bg-grey-800{
   background-color: #343a40 !important;
 }
+.text-orange{
+  color: #F74D4D;
+}
+a.link-white{
+  color: white;
+}
+a.link-white:hover{
+  color: #6c757d;
+}
 .btn-orange{
   background-color: #F74D4D !important;
   color: white !important;
