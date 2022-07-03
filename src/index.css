@@ -44,3 +44,15 @@ a.link-white:hover{
 .btn-orange:hover{
   background-color: #E13A3A !important;
 }
+
+
+.table-dark-striped tr{
+  height: 50px;
+  border-bottom: 1px solid white;
+}
+.table-dark-striped tr:nth-child(even){
+  background-color: #343a40;
+}
+.table-dark-striped tr:nth-child(odd){
+  background-color: #495057;
+}
