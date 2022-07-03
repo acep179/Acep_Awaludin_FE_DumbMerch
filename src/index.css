@@ -25,6 +25,9 @@ code {
 .bg-grey-800{
   background-color: #343a40 !important;
 }
+.text-justify{
+  text-align: justify;
+}
 .text-orange{
   color: #F74D4D;
 }
