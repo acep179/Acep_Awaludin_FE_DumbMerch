@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 // import './App.css';
-import Category from './pages/Category'
+import EditCategory from './pages/EditCategory'
 
 function App() {
   return (
     <div className="App">
-      <Category />
+      <EditCategory />
     </div>
   );
 }
