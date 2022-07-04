@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function RegisterForm() {
     return (
@@ -15,7 +16,9 @@ function RegisterForm() {
                     <div className='input-group input-group-lg'>
                         <input type="password" className='form-control bg-grey-700' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder='Password' />
                     </div>
-                    <button className='btn btn-orange w-100' type="submit">Login</button>
+                    <Link to="/login">
+                        <button className='btn btn-orange w-100' type="submit">Register</button>
+                    </Link>
                 </form>
             </div>
         </div>
