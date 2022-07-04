@@ -4,9 +4,11 @@ import Logo from './../assets/img/logo.png'
 
 function User() {
     return (
-        <li className="nav-item">
-            <Link className="nav-link link-white" to="/profile">Profile</Link>
-        </li>
+        <>
+            <li className="nav-item">
+                <Link className="nav-link link-white" to="/profile">Profile</Link>
+            </li>
+        </>
     )
 }
 
