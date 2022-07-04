@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Category, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
+import { Category, Complain, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/complain" element={<Complain />} />
         <Route path="/detail-product" element={<DetailProduct />} />
         <Route path="/edit-category" element={<EditCategory />} />
         <Route path="/edit-product" element={<EditProduct />} />

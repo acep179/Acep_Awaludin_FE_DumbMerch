@@ -1,4 +1,5 @@
 import Category from './Category'
+import Complain from './Complain'
 import DetailProduct from './DetailProduct'
 import EditCategory from './EditCategory'
 import EditProduct from './EditProduct'
@@ -9,4 +10,4 @@ import Profile from './Profile'
 import Register from './Register'
 
 
-export { Category, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register }
+export { Category, Complain, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register }
