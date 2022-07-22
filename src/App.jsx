@@ -25,11 +25,10 @@ function App() {
     // Redirect Auth
     if (state.isLogin === false) {
       navigate("/login" || "/register");
-    }
-    else {
+    } else {
       if (state.user.status === 'admin') {
         navigate('/product');
-      } else if (state.user.status === 'custommer') {
+      } else if (state.user.status === 'customer') {
         navigate('/');
       }
     }
