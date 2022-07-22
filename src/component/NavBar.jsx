@@ -1,8 +1,9 @@
-import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { React, useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/userContext'
 import Logo from './../assets/img/logo.png'
 
-function User() {
+function Customer() {
     return (
         <>
             <li className="nav-item">
@@ -27,7 +28,17 @@ function Admin() {
 
 function NavBar() {
 
-    const [isUser, setIsUser] = useState(true)
+    const [state, dispatch] = useContext(UserContext)
+
+    let navigate = useNavigate()
+
+    const logout = () => {
+        console.log(state)
+        dispatch({
+            type: "LOGOUT"
+        })
+        navigate("/login")
+    }
 
 
     return (
@@ -44,9 +55,14 @@ function NavBar() {
                         <li className="nav-item">
                             <Link className="nav-link link-white" aria-current="page" to="/complain">Complain</Link>
                         </li>
-                        {isUser ? <User /> : <Admin />}
+                        {state.user.status === "admin" ? <Admin /> : <Customer />}
                         <li className="nav-item">
-                            <Link className="nav-link link-white" to="/login">Logout</Link>
+                            <p
+                                className="nav-link link-white"
+                                onClick={logout}
+                                style={{ cursor: "pointer" }}>
+                                Logout
+                            </p>
                         </li>
                     </ul>
                 </div>

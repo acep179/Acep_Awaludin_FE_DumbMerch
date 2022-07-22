@@ -24,16 +24,16 @@ function App() {
 
     // Redirect Auth
     if (state.isLogin === false) {
-      navigate("/login");
-    } else {
+      navigate("/login" || "/register");
+    }
+    else {
       if (state.user.status === 'admin') {
-        navigate('/product-admin');
-      } else if (state.user.status === 'customer') {
+        navigate('/product');
+      } else if (state.user.status === 'custommer') {
         navigate('/');
       }
     }
   }, [state]);
-
 
   const checkUser = async () => {
     try {

@@ -45,8 +45,8 @@ function LoginForm() {
           payload: response.data.data,
         });
 
-        if (response.data.data.status === 'admin') {
-          navigate('/complain-admin');
+        if (response.data.data.status === 'customer') {
+          navigate('/');
         } else {
           navigate('/');
         }
