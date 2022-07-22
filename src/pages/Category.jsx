@@ -1,18 +1,17 @@
 import React from 'react'
 import { ListCategoryTable, NavBar } from './../component'
-
-let data = [
-    {
-        id: 1,
-        categoryName: 'Mouse',
-    },
-    {
-        id: 2,
-        categoryName: 'Keyboard',
-    },
-]
+import { useQuery } from "react-query";
+import { API } from '../config/api';
 
 function Category() {
+
+    let { data: categories } = useQuery('categoriesCache', async () => {
+        const response = await API.get('/categories');
+        return response.data.data.categories;
+    });
+
+    console.log(categories)
+
     return (
         <div>
             <NavBar />
@@ -24,9 +23,9 @@ function Category() {
                         <th>Category Name</th>
                         <th>Action</th>
                     </tr>
-                    {data.map((item) => {
+                    {categories.map((item) => {
                         return (
-                            <ListCategoryTable id={item.id} categoryName={item.categoryName} />
+                            <ListCategoryTable id={item.id} name={item.name} />
                         )
                     })}
                 </table>
