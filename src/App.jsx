@@ -72,9 +72,9 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/category" element={<Category />} />
       <Route path="/complain" element={<Complain />} />
-      <Route path="/detail-product" element={<DetailProduct />} />
-      <Route path="/edit-category" element={<EditCategory />} />
-      <Route path="/edit-product" element={<EditProduct />} />
+      <Route path="/detail-product/:id" element={<DetailProduct />} />
+      <Route path="/edit-category/:id" element={<EditCategory />} />
+      <Route path="/edit-product/:id" element={<EditProduct />} />
       <Route path="/login" element={<Login />} />
       <Route path="/product" element={<Product />} />
       <Route path="/profile" element={<Profile />} />
