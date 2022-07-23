@@ -10,22 +10,19 @@ function Home() {
         return response.data.data.products;
     });
 
-    console.log(products)
-
-
     return (
         <div>
             <NavBar />
 
-            <h5 className='text-orange container'>Product</h5>
+            <div className='container d-flex flex-wrap'>
+                <h5 className='text-orange w-100'>Product</h5>
 
-            {products.map((item) => {
-                return (
-                    <div className='d-flex'>
-                        <ProductCard image={item.image} name={item.name} price={item.price} qty={item.qty} />
-                    </div>
-                )
-            })}
+                {products?.map((item) => {
+                    return (
+                        <ProductCard key={item.id} id={item.id} image={item.image} name={item.name} price={item.price} qty={item.qty} />
+                    )
+                })}
+            </div>
         </div>
     )
 }

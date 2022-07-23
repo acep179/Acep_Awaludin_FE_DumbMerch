@@ -23,9 +23,9 @@ function Category() {
                         <th>Category Name</th>
                         <th>Action</th>
                     </tr>
-                    {categories.map((item) => {
+                    {categories?.map((item) => {
                         return (
-                            <ListCategoryTable id={item.id} name={item.name} />
+                            <ListCategoryTable key={item.id} id={item.id} name={item.name} />
                         )
                     })}
                 </table>
