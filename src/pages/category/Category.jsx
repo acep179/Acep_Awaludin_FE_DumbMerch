@@ -1,7 +1,7 @@
 import React from 'react'
-import { ListCategoryTable, NavBar } from './../component'
+import { ListCategoryTable, NavBar } from '../../component'
 import { useQuery } from "react-query";
-import { API } from '../config/api';
+import { API } from '../../config/api';
 
 function Category() {
 

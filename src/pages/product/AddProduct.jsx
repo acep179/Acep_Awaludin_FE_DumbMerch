@@ -2,16 +2,8 @@ import React from 'react'
 import { NavBar } from './../component'
 import { useQuery } from "react-query";
 import { API } from '../config/api';
-import { useParams } from 'react-router-dom';
 
 function EditProduct() {
-
-    const { id } = useParams()
-
-    let { data: product } = useQuery('productCache', async () => {
-        const response = await API.get(`/product/${id}`)
-        return response.data.data.product;
-    });
 
     return (
         <div>

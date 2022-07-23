@@ -1,15 +1,15 @@
 import React from 'react'
-import { NavBar } from './../component'
+import { NavBar } from '../component'
 
-function Complain() {
+function ComplainAdmin() {
     return (
         <div>
             <NavBar />
             <div className='container'>
-                <h1>Under Construction</h1>
+                <h1>Complain Admin is Under Construction</h1>
             </div>
         </div>
     )
 }
 
-export default Complain
+export default ComplainAdmin

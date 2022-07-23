@@ -1,13 +1,19 @@
-import Category from './Category'
-import Complain from './Complain'
-import DetailProduct from './DetailProduct'
-import EditCategory from './EditCategory'
-import EditProduct from './EditProduct'
+import Category from './category/Category'
+import EditCategory from './category/EditCategory'
+import AddCategory from './category/EditCategory'
+
+import AddProduct from './product/DetailProduct'
+import DetailProduct from './product/DetailProduct'
+import EditProduct from './product/EditProduct'
+import Product from './product/Product'
+
+import ComplainAdmin from './ComplainAdmin'
+import ComplainCustomer from './ComplainCustomer'
+
 import Home from './Home'
 import Login from './Login'
-import Product from './Product'
 import Profile from './Profile'
 import Register from './Register'
 
 
-export { Category, Complain, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register }
+export { Category, EditCategory, AddCategory, AddProduct, DetailProduct, EditProduct, Product, ComplainAdmin, ComplainCustomer, Home, Login, Profile, Register }

@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavBar } from './../component'
+import { NavBar } from './../../component'
 import { useQuery } from "react-query";
-import { API } from '../config/api';
+import { API } from '../../config/api';
 import { useParams } from 'react-router-dom';
 
 function EditProduct() {

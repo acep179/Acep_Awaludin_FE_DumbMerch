@@ -1,7 +1,7 @@
 import React from 'react'
-import { ListProductTable, NavBar } from './../component'
+import { ListProductTable, NavBar } from '../../component'
 import { useQuery } from "react-query";
-import { API } from '../config/api';
+import { API } from '../../config/api';
 import { Link } from 'react-router-dom';
 
 function Product() {

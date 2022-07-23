@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar } from './../component'
+import { NavBar } from './../../component'
 
 function EditCategory() {
     return (

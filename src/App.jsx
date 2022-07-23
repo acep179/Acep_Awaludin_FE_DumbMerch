@@ -3,7 +3,7 @@
 import { useContext, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { UserContext } from './context/userContext';
-import { Category, Complain, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
+import { Category, ComplainAdmin, ComplainCustomer, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
 
 import { API, setAuthToken } from './config/api';
 
@@ -71,7 +71,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/category" element={<Category />} />
-      <Route path="/complain" element={<Complain />} />
+      <Route path="/complain" element={state.user.status === "admin" ? <ComplainAdmin /> : <ComplainCustomer />} />
       <Route path="/detail-product/:id" element={<DetailProduct />} />
       <Route path="/edit-category/:id" element={<EditCategory />} />
       <Route path="/edit-product/:id" element={<EditProduct />} />
