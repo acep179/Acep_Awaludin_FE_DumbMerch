@@ -69,28 +69,28 @@ function AddProduct() {
             e.preventDefault();
 
             // Configuration
-            // const config = {
-            //     headers: {
-            //         'Content-type': 'multipart/form-data',
-            //         token
-            //     },
-            // };
+            const config = {
+                headers: {
+                    'Content-type': 'multipart/form-data',
+                    token
+                },
+            };
 
-            // // Store data with FormData as object
-            // const formData = new FormData();
-            // formData.set('image', form.image[0], form.image[0].name);
-            // formData.set('name', form.name);
-            // formData.set('desc', form.desc);
-            // formData.set('price', form.price);
-            // formData.set('qty', form.qty);
-            // formData.set('categoryId', categoryId);
-            // // categoryId didapatkan dari handleChangeCategory
+            // Store data with FormData as object
+            const formData = new FormData();
+            formData.set('image', form.image[0], form.image[0].name);
+            formData.set('name', form.name);
+            formData.set('desc', form.desc);
+            formData.set('price', form.price);
+            formData.set('qty', form.qty);
+            formData.set('categoryId', categoryId);
+            // categoryId didapatkan dari handleChangeCategory
 
-            // console.log(form);
+            console.log(form);
 
-            // // Insert product data
-            // const response = await API.post('/product', formData, config);
-            // console.log(response);
+            // Insert product data
+            const response = await API.post('/product', formData, config);
+            console.log(response);
 
             navigate('/product');
         } catch (error) {
