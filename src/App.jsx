@@ -3,7 +3,7 @@
 import { useContext, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { UserContext } from './context/userContext';
-import { Category, ComplainAdmin, ComplainCustomer, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
+import { Category, ComplainAdmin, ComplainCustomer, AddProduct, DetailProduct, EditCategory, EditProduct, Home, Login, Product, Profile, Register } from './pages'
 
 import { API, setAuthToken } from './config/api';
 
@@ -70,15 +70,18 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/category" element={<Category />} />
-      <Route path="/complain" element={state.user.status === "admin" ? <ComplainAdmin /> : <ComplainCustomer />} />
-      <Route path="/detail-product/:id" element={<DetailProduct />} />
-      <Route path="/edit-category/:id" element={<EditCategory />} />
-      <Route path="/edit-product/:id" element={<EditProduct />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/product" element={<Product />} />
-      <Route path="/profile" element={<Profile />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/complain" element={state.user.status === "admin" ? <ComplainAdmin /> : <ComplainCustomer />} />
+
+      <Route path="/category" element={<Category />} />
+      <Route path="/edit-category/:id" element={<EditCategory />} />
+
+      <Route path="/add-product" element={<AddProduct />} />
+      <Route path="/detail-product/:id" element={<DetailProduct />} />
+      <Route path="/edit-product/:id" element={<EditProduct />} />
+      <Route path="/product" element={<Product />} />
     </Routes>
 
   );

@@ -2,7 +2,7 @@ import Category from './category/Category'
 import EditCategory from './category/EditCategory'
 import AddCategory from './category/EditCategory'
 
-import AddProduct from './product/DetailProduct'
+import AddProduct from './product/AddProduct'
 import DetailProduct from './product/DetailProduct'
 import EditProduct from './product/EditProduct'
 import Product from './product/Product'
