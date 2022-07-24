@@ -8,8 +8,10 @@ function Product() {
 
     let { data: products } = useQuery('productsCache', async () => {
         const response = await API.get('/products')
-        return response.data.data.products;
+        return response.data.products;
     });
+
+    console.log(products)
 
     return (
         <div>

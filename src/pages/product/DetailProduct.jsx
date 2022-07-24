@@ -7,19 +7,22 @@ import { useParams } from 'react-router-dom';
 
 function DetailProduct() {
 
-    const { id } = useParams()
+    const id = useParams().id
+    console.log(typeof (id))
 
     let { data: product } = useQuery('productCache', async () => {
-        const response = await API.get(`/product/${id}`)
-        return response.data.data.product;
+        const response = await API.get('/product/' + id)
+        return response.data.product;
     });
+
+    console.log(product)
 
     return (
         <div>
             <NavBar />
             <div className='container'>
                 <div className='row justify-content-center'>
-                    <img className='h-100 col-4' src={product.img} alt={product.name} />
+                    <img className='h-100 col-4' src={product.image} alt={product.name} />
                     <div className='ms-5 col-6'>
                         <h1 className='text-orange'>{product.name}</h1>
                         <p>Stock: {product.qty}</p>

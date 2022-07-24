@@ -7,14 +7,14 @@ function Home() {
 
     let { data: products } = useQuery('productsCache', async () => {
         const response = await API.get('/products')
-        return response.data.data.products;
+        return response.data.products;
     });
 
     return (
         <div>
             <NavBar />
 
-            <div className='container d-flex flex-wrap'>
+            <div className='container d-flex flex-wrap justify-content-between'>
                 <h5 className='text-orange w-100'>Product</h5>
 
                 {products?.map((item) => {

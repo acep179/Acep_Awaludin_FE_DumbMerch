@@ -5,7 +5,17 @@ function ListProductTable(product) {
     return (
         <tr>
             <td className='p-2'>{product.id}</td>
-            <td className='p-2'>{product.image}</td>
+            <td className='p-2'>
+                <img
+                    src={product.image}
+                    style={{
+                        maxWidth: '150px',
+                        maxHeight: '150px',
+                        objectFit: 'cover',
+                    }}
+                    alt={product.name}
+                />
+            </td>
             <td className='p-2'>{product.name}</td>
             <td className='p-2'>{product.desc}</td>
             <td className='p-2'>{product.price}</td>
