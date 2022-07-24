@@ -1,6 +1,7 @@
 import React from 'react'
-import { ListCategoryTable, NavBar } from '../../component'
 import { useQuery } from "react-query";
+import { Link } from 'react-router-dom';
+import { ListCategoryTable, NavBar } from '../../component'
 import { API } from '../../config/api';
 
 function Category() {
@@ -10,13 +11,12 @@ function Category() {
         return response.data.data.categories;
     });
 
-    console.log(categories)
-
     return (
         <div>
             <NavBar />
-            <div className='container'>
+            <div className='container d-flex flex-column'>
                 <p>List Category</p>
+                <Link className='btn btn-light mb-2 ms-auto' to={'/add-category'}>Add Category</Link>
                 <table className='table-dark-striped w-100'>
                     <tr>
                         <th>No</th>

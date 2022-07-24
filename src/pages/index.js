@@ -1,6 +1,6 @@
 import Category from './category/Category'
 import EditCategory from './category/EditCategory'
-import AddCategory from './category/EditCategory'
+import AddCategory from './category/AddCategory'
 
 import AddProduct from './product/AddProduct'
 import DetailProduct from './product/DetailProduct'
