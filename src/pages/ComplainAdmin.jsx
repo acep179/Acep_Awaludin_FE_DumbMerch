@@ -25,9 +25,17 @@ function ComplainAdmin() {
     }
 
     useEffect(() => {
-        socket = io('http://localhost:5000')
+        socket = io('http://localhost:5000', {
+            auth: {
+                token: localStorage.getItem("token") // we must set options to get access to socket server
+            }
+        })
 
         loadContact()
+
+        socket.on("connect_error", (err) => {
+            console.error(err.message); // not authorized
+        });
 
         return () => {
             socket.disconnect()
