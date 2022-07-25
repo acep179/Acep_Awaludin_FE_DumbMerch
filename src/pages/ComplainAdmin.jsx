@@ -47,7 +47,7 @@ function ComplainAdmin() {
                     <div style={{ height: '89.5vh' }} className="col-md-3 px-3 border-end border-dark overflow-auto">
                         <Contact
                             dataContact={contacts}
-                            clicContact={onClickContact}
+                            clickContact={onClickContact}
                             contact={contact} />
                     </div>
                     {/* <div style={{ maxHeight: '89.5vh' }} className="col-md-9 px-0">
