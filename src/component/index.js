@@ -2,16 +2,16 @@ import ListCategoryTable from './category/ListCategoryTable'
 
 import ListProductTable from './product/ListProductTable'
 import ProductCard from './product/ProductCard'
-import ProductCardDetail from './TransactionCard'
+import TransactionCardDetail from './TransactionCardDetail'
 
-import DetailProfile from './DetailProfile'
-import LoginForm from './LoginForm'
 import MainHero from './MainHero'
-import NavBar from './NavBar'
+import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
-import TransactionCard from './TransactionCard'
-import SaveBtn from './btn/SaveBtn'
 import LoginRegisterBtn from './btn/LoginRegisterBtn'
 
+import NavBar from './NavBar'
+import SaveBtn from './btn/SaveBtn'
+import DetailProfile from './DetailProfile'
 
-export {DetailProfile, ListCategoryTable, ListProductTable, LoginForm, MainHero, NavBar, ProductCard, ProductCardDetail, RegisterForm, TransactionCard, SaveBtn, LoginRegisterBtn}
+
+export {DetailProfile, ListCategoryTable, ListProductTable, LoginForm, MainHero, NavBar, ProductCard, RegisterForm, TransactionCardDetail, SaveBtn, LoginRegisterBtn}
