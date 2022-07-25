@@ -6,7 +6,7 @@ import dateFormat from 'dateformat';
 import { UserContext } from '../context/userContext';
 
 function Profile() {
-    const [state, dispatch] = useContext(UserContext);
+    const [state] = useContext(UserContext);
     const id = state.user.id
 
     let { data: transactions } = useQuery('transactionsCache', async () => {
