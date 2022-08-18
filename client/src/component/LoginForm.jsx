@@ -12,8 +12,8 @@ function LoginForm() {
   const [message, setMessage] = useState(null);
 
   const [form, setForm] = useState({
-    email: '',
-    password: '',
+    loginEmail: '',
+    loginPassword: '',
   });
 
   const { email, password } = form;
