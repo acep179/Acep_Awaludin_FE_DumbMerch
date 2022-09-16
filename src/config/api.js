@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const API = axios.create({
-    baseURL: process.env.SERVER_BASEURL,
+    baseURL: process.env.REACT_APP_BASEURL,
 });
 
 //. Menyimpan token ke dalam Header
