@@ -8,12 +8,12 @@ import { UserContext } from '../context/userContext';
 function LoginForm() {
 
   let navigate = useNavigate();
-  const [state, dispatch] = useContext(UserContext);
+  const [, dispatch] = useContext(UserContext);
   const [message, setMessage] = useState(null);
 
   const [form, setForm] = useState({
-    loginEmail: '',
-    loginPassword: '',
+    email: '',
+    password: '',
   });
 
   const { email, password } = form;

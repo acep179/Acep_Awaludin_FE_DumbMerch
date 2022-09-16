@@ -17,11 +17,11 @@ function Home() {
             <div className='container d-flex flex-wrap justify-content-between'>
                 <h5 className='text-orange w-100'>Product</h5>
 
-                {products?.map((item) => {
+                {products?.length > 0 ? products?.map((item) => {
                     return (
                         <ProductCard key={item.id} id={item.id} image={item.image} name={item.name} price={item.price} qty={item.qty} />
                     )
-                })}
+                }) : (<h3 className='text-center w-100'>Sorry, no products yet</h3>)}
             </div>
         </div>
     )
