@@ -47,7 +47,7 @@ function DetailProduct() {
         <div>
             <NavBar />
             <div className='container'>
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center mt-5'>
                     <img className='h-100 col-4' src={product?.image} alt={product?.name} />
                     <div className='ms-5 col-6'>
                         <h1 className='text-orange'>{product?.name}</h1>

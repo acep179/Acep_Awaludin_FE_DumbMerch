@@ -27,7 +27,7 @@ function ComplainCustomer() {
     }
 
     useEffect(() => {
-        socket = io('http://localhost:5000', {
+        socket = io(process.env.REACT_APP_BASEURL, {
             auth: {
                 token: localStorage.getItem("token") // we must set options to get access to socket server
             },
